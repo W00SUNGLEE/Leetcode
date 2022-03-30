@@ -13,7 +13,4 @@ class Solution:
             elif nums[index] < target:
                 head = index + 1
                 
-        if nums[index] == target:
-                return index 
-        else:
-            return -1
+        return -1
