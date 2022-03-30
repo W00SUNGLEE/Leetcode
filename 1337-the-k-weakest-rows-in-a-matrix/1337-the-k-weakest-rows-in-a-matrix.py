@@ -9,7 +9,6 @@ class Solution:
             for j in range(len(mat[i])):
                 if mat[i][j] == 1:
                     cnt += 1
-            print(cnt)
             tmp_List.append(cnt)
         
         
