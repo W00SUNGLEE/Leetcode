@@ -13,8 +13,6 @@ class Solution:
                 head = index+1
             elif nums[index] > target:
                 tail = index-1
-            
-        print(head, index, tail)
         
         if nums[index] > target:
             return index
