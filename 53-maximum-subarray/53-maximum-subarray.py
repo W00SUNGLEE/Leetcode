@@ -3,8 +3,8 @@ import sys
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         best_sum = -sys.maxsize -1
-        best_start = 0
-        best_end = 0
+        #best_start = 0
+        #best_end = 0
         current_sum = 0
         
         for current_end, x in enumerate(nums):
@@ -16,7 +16,8 @@ class Solution:
             
             if current_sum > best_sum:
                 best_sum = current_sum
-                best_start = current_start
-                best_end = current_end + 1
-                  
+                #best_start = current_start
+                #best_end = current_end + 1
+                
+            print(best_sum)
         return best_sum
