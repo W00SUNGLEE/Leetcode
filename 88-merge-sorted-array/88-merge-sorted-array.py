@@ -16,7 +16,6 @@ class Solution:
                 j += 1
         tmp += nums1[i:m]
         tmp += nums2[j:n]
-        print(tmp)
         
         nums1.clear()
         nums1 += tmp[:]
