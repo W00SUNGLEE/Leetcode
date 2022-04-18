@@ -5,6 +5,7 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        """
         node = head
         cnt = 0
           
@@ -30,3 +31,20 @@ class Solution:
             node.next = node.next.next   
             
         return head
+        """
+        dummy=ListNode(-1)
+        dummy.next=head
+        
+        back=dummy
+        front=dummy
+        
+        for i in range(n): #Move front cursor by 'n'
+            front=front.next
+            
+        while front.next!=None: # Move front, back cursor by 1 until next node of front is null
+            front=front.next
+            back=back.next
+        
+        back.next=back.next.next # Remove target and link back node with next node of target
+        
+        return dummy.next
