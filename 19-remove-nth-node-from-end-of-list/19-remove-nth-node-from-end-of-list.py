@@ -14,6 +14,7 @@ class Solution:
             node = node.next
         
         node = head
+        
         if cnt == n:
             return head.next
         
