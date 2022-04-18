@@ -47,7 +47,8 @@ class Solution:
                                 return False
                             else:
                                 check_3X3_array[int(board[x+i][y+j])] += 1
-                        
+                
+                #clear [0*10]
                 for i in range(10):
                      check_3X3_array[i] = 0
                            
