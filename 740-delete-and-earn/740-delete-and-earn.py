@@ -2,7 +2,6 @@ class Solution:
     def deleteAndEarn(self, nums: List[int]) -> int:
         nums.sort()
         nums_dic = {}
-        print(nums)
         
         i = 0
         while i < len(nums):
@@ -13,7 +12,6 @@ class Solution:
                 else:
                     cnt += 1
             
-            print(cnt)
             nums_dic[nums[i]] = nums[i] * cnt
             i += cnt
         
@@ -27,9 +25,6 @@ class Solution:
                 solution.append(value)
                 
             tmp_key = key
-        
-        print(nums_dic)
-        print(solution)
         
         n = len(solution)
         
