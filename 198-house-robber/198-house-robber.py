@@ -14,7 +14,7 @@ class Solution:
             else: # n > 2
                 for i in range(2, len(nums)):
                     dp.append(max(dp[i-1], dp[i-2]+nums[i]))
-                print(dp)
+                
                 return dp[n-1] 
             
                    
