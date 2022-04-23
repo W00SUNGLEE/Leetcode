@@ -3,7 +3,7 @@ class Solution:
         if image[sr][sc] == newColor:
             return image
         
-        Solution.dfs(self, image, sr, sc, newColor)
+        self.dfs(image, sr, sc, newColor)
         
         return image
     
