@@ -7,7 +7,6 @@
 class Solution:
     def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:
         
-        
         def dfs(root1: Optional[TreeNode], root2: Optional[TreeNode]):
             root1.val = root1.val + root2.val
             
@@ -18,19 +17,6 @@ class Solution:
             
                 else: #root1.left != None
                     dfs(root1.left, root2.left)
-            
-            """
-            if root2.left == None:
-                return None
-            
-            else: #root2.left != None
-                if root1.left == None:
-                    root1.left = root2.left
-                    return None
-                
-                else: #root1.left != None
-                    dfs(root1.left, root2.left)
-            """
             
             #right
             if root2.right != None:
