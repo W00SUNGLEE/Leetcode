@@ -1,34 +1,33 @@
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, newColor: int) -> List[List[int]]:
-        check = [[0 for _ in range(len(image[0]))] for _ in range(len(image))]
+        if image[sr][sc] == newColor:
+            return image
         
-        print(check)
-        
-        Solution.dfs(self, image, sr, sc, newColor, check)
+        Solution.dfs(self, image, sr, sc, newColor)
         
         return image
     
     
-    def dfs(self, image: List[List[int]], sr: int, sc: int, newColor: int, check: List[List[int]]):
+    def dfs(self, image: List[List[int]], sr: int, sc: int, newColor: int):
         oldColor = image[sr][sc]
         image[sr][sc] = newColor
-        check[sr][sc] = 1
+        
         
         if sr > 0:
-            if image[sr-1][sc] == oldColor and check[sr-1][sc] == 0:
-                Solution.dfs(self, image, sr-1, sc, newColor, check)
+            if image[sr-1][sc] == oldColor:
+                Solution.dfs(self, image, sr-1, sc, newColor)
         
         if sr < len(image) - 1:
-            if image[sr+1][sc] == oldColor and check[sr+1][sc] == 0:
-                Solution.dfs(self, image, sr+1, sc, newColor, check)
+            if image[sr+1][sc] == oldColor:
+                Solution.dfs(self, image, sr+1, sc, newColor)
         
         if sc > 0 :
-            if image[sr][sc-1] == oldColor and check[sr][sc-1] == 0:
-                Solution.dfs(self, image, sr, sc-1, newColor, check)
+            if image[sr][sc-1] == oldColor:
+                Solution.dfs(self, image, sr, sc-1, newColor)
         
         if sc < len(image[0]) - 1:
-            if image[sr][sc+1] == oldColor and check[sr][sc+1] == 0:
-                Solution.dfs(self, image, sr, sc+1, newColor, check)
+            if image[sr][sc+1] == oldColor:
+                Solution.dfs(self, image, sr, sc+1, newColor)
         
         
             
