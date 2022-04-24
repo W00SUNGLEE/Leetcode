@@ -15,9 +15,9 @@ class Solution:
             return root
         
         queue = deque([])
-        if root.left != None:
+        if root.left:
             queue.append(root.left)
-        if root.right != None:
+        if root.right:
             queue.append(root.right)
         
         tmp = root
