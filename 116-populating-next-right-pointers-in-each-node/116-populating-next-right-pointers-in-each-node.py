@@ -27,9 +27,9 @@ class Solution:
             tmp.next = node
             tmp = node
             
-            if node.left != None:
+            if node.left:
                 queue.append(node.left)
-            if node.right != None:
+            if node.right:
                 queue.append(node.right)
         
         node = root
