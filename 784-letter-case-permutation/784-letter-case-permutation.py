@@ -7,7 +7,7 @@ class Solution:
         
         def backtracking(v):
             if v == len(s):
-                solution.append("".join(list(i for i in tmp)))
+                solution.append("".join([i for i in tmp]))
                                 
             else:
                 if s[v].isalpha():
