@@ -10,11 +10,10 @@ class Solution:
         visited = []
         
         while head:
-            if head == None:
-                return -1
-            
             if head in visited:
                 return True
             
             visited.append(head)
             head = head.next
+            
+        return False
