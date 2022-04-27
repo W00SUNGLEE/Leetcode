@@ -13,7 +13,7 @@ class MyQueue:
         return self.stack[0]
 
     def empty(self) -> bool:
-        return True if len(self.stack) == 0 else False
+        return len(self.stack) == 0
 
 
 # Your MyQueue object will be instantiated and called as such:
