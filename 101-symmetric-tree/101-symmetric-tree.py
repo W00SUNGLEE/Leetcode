@@ -6,7 +6,8 @@
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-        
+        if root == None:
+            return Ture
         
         def dfs(nodeLeft, nodeRight) -> bool:
             if nodeLeft == None and nodeRight == None:
