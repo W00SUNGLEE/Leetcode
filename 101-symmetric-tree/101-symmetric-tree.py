@@ -20,6 +20,9 @@ class Solution:
             
             else: #nodeLeft != None and  nodeRight != None
                 if nodeLeft.val == nodeRight.val:                    
-                    return dfs(nodeLeft.left, nodeRight.right) and dfs(nodeLeft.right, nodeRight.left)         
+                    return dfs(nodeLeft.left, nodeRight.right) and dfs(nodeLeft.right, nodeRight.left)
+                
+                else: #nodeLeft.val != nodeRight.val
+                    return False
                 
         return dfs(root.left, root.right)
