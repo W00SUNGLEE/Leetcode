@@ -18,7 +18,7 @@ class Solution:
             elif nodeLeft == None and  nodeRight != None:
                 return False
             
-            else:
+            else: #nodeLeft != None and  nodeRight != None
                 if nodeLeft.val == nodeRight.val:                    
                     return dfs(nodeLeft.left, nodeRight.right) and dfs(nodeLeft.right, nodeRight.left)         
                 
