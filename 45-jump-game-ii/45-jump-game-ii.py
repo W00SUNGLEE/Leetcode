@@ -20,12 +20,11 @@ class Solution:
                     return dp[len(nums)-1][1]
                 
                 if i+nums[i] > dp[i][0]:
-                    print(i+nums[i], len(nums), i+nums[i] > len(nums))
                     if i+nums[i]+1 > len(nums):
                         rangeMax = len(nums)
                     else:
                         rangeMax = i+nums[i]+1
-                    print(rangeMax)
+
                     for j in reversed(range(i+1, rangeMax)):
                         dp[j][0] = i+nums[i]
                         if dp[j][1] == 0:
