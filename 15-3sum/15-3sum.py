@@ -3,20 +3,9 @@ from collections import defaultdict
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         nums.sort()
-        print(nums)
-        
+
         answer = []
-        #dic = defaultdict(list)
-        if len(nums) < 3:
-            return answer
-        
-        if len(nums) == 3:
-            if nums[0] + nums[1] + nums[2] == 0:
-                return [[nums[0], nums[1], nums[2]]]
-            else:
-                return answer
-                    
-        
+                          
         for i in range(len(nums)):
             if i > 0 and nums[i] == nums[i-1]:
                 continue
