@@ -18,37 +18,14 @@ class Solution:
                     
         
         for i in range(len(nums)):
-            #dic[-(nums[i])].append(i)
-            if i > 0:
-                if nums[i] == nums[i-1]:
-                    continue
-                    
-            #if i+2 < len(nums):
-            #    if nums[i] == 0 and nums[i+1] == 0 and nums[i+2] == 0:
-            #        answer.append([0, 0, 0])
-
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
                     
             tmp = -(nums[i])
             a = i+1
             b = len(nums)-1
         
-            while a < b:
-                """
-                    if nums[a] == nums[a+1] or nums[b] == nums[b-1]:
-                    if nums[a] == nums[a+1]:
-                        a += 1
-                    if nums[b] == nums[b-1]:
-                        b -= 1  
-                        
-                    if a >= b and nums[a]+nums[b] == tmp:
-                        answer.append([nums[i], nums[a], nums[b]])
-                    
-                    continue
-                """
-
-                
-                
-                
+            while a < b:              
                 if nums[a]+nums[b] == tmp:
                     answer.append([nums[i], nums[a], nums[b]])
                     a += 1
@@ -61,16 +38,9 @@ class Solution:
                 elif nums[a]+nums[b] > tmp:
                     b -= 1
             
-            
-        
+
         print(answer)
-        
-        #arr = []
-        #for i in answer:
-        #    if i not in arr:
-        #        arr.append(i)
+
         return answer
-    
-        #for i in range(len(answer))
-        #    for j in range(i+1, len(answer)):
+
         
