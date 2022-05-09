@@ -26,16 +26,17 @@ class Solution:
             b = len(nums)-1
         
             while a < b:              
-                if nums[a]+nums[b] == tmp:
+                numSum = nums[a]+nums[b]
+                if numSum == tmp:
                     answer.append([nums[i], nums[a], nums[b]])
                     a += 1
                     b -= 1
                     while nums[a] == nums[a-1]and a < b:
                         a += 1
                     
-                elif nums[a]+nums[b] < tmp:
+                elif numSum < tmp:
                     a += 1
-                elif nums[a]+nums[b] > tmp:
+                elif numSum > tmp:
                     b -= 1
             
 
