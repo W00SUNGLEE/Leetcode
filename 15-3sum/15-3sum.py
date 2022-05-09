@@ -53,6 +53,8 @@ class Solution:
                     answer.append([nums[i], nums[a], nums[b]])
                     a += 1
                     b -= 1
+                    while nums[a] == nums[a-1]and a < b:
+                        a += 1
                     
                 elif nums[a]+nums[b] < tmp:
                     a += 1
@@ -63,11 +65,11 @@ class Solution:
         
         print(answer)
         
-        arr = []
-        for i in answer:
-            if i not in arr:
-                arr.append(i)
-        return arr
+        #arr = []
+        #for i in answer:
+        #    if i not in arr:
+        #        arr.append(i)
+        return answer
     
         #for i in range(len(answer))
         #    for j in range(i+1, len(answer)):
