@@ -36,7 +36,6 @@ class Solution:
             
             if i >= 0 and j >= 0:
                 if s[i] != t[j]:
-                    print(1)
                     return False
             else:
                 return False
@@ -48,5 +47,4 @@ class Solution:
             return True
         
         else:
-            print(2)
             return False
