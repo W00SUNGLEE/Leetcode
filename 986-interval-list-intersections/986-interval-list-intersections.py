@@ -15,7 +15,6 @@ class Solution:
                 i += 1
                 continue
                 
-            
             tmp = []
             tmp.append(max(firstList[i][0], secondList[j][0]))
                 
