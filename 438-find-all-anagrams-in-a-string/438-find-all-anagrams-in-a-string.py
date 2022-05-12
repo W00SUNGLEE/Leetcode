@@ -15,18 +15,14 @@ class Solution:
             dictP[p[i]] += 1
             
         keys = dictP.keys()
-            
-        print(dictP)
         
         i = 0
         j = 0
         
         while i <= m-n and j < m:
-            print(s[j], dictS, s[j] in keys)
             if s[j] in keys:
                 dictS[s[j]] += 1
                 if dictS[s[j]] <= dictP[s[j]]:
-                    #if j-i+1 < n:
                     if j-i+1 == n:
                         answer.append(i)
                         dictS[s[i]] -= 1
@@ -45,20 +41,5 @@ class Solution:
                 i = j+1
                 dictS = defaultdict(int)
             j += 1
-            
-        print(answer)
         
         return answer
-                    
-        """
-        for i in range(len(s)):
-            if s[i] in keys:
-                dictS[i] += 1
-                if start == -1
-                    start = i
-                
-                else:
-                    if i-n+1 > start:
-                        
-                    
-        """
