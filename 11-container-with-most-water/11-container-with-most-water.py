@@ -7,9 +7,9 @@ class Solution:
         b = len(height)-1
         
         while a < b:
-            v = min(height[a], height[b])
-            h = (b-a)
-            tmp =  v * h 
+            h = min(height[a], height[b])
+            w = (b-a)
+            tmp =  w * h 
             answer = max(answer, tmp)
             
             if height[a] <= height[b]:
