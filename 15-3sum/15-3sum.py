@@ -20,7 +20,7 @@ class Solution:
                     answer.append([nums[i], nums[a], nums[b]])
                     a += 1
                     b -= 1
-                    while nums[a] == nums[a-1]and a < b:
+                    while nums[a] == nums[a-1] and a < b:
                         a += 1
                     
                 elif numSum < tmp:
