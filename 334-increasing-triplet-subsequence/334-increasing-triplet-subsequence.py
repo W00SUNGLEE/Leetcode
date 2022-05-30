@@ -2,6 +2,22 @@ import sys
 class Solution:
     def increasingTriplet(self, nums: List[int]) -> bool:
         
+        first = sys.maxsize
+        second = sys.maxsize
+        
+        for i in range(len(nums)):
+            if nums[i] <= first:
+                first = nums[i]
+                
+            elif nums[i] <= second:
+                second = nums[i]
+            
+            else:
+                return True
+            
+        return False
+        
+        """
         n = len(nums)
         
         first = nums[0]
@@ -22,7 +38,8 @@ class Solution:
                         
                     else:
                         return True
-            
+        
         return False
+        """
             
             
