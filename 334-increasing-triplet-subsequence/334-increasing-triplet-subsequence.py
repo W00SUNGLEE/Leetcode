@@ -5,12 +5,12 @@ class Solution:
         first = sys.maxsize
         second = sys.maxsize
         
-        for i in range(len(nums)):
-            if nums[i] <= first:
-                first = nums[i]
+        for num in nums:
+            if num <= first:
+                first = num
                 
-            elif nums[i] <= second:
-                second = nums[i]
+            elif num <= second:
+                second = num
             
             else:
                 return True
